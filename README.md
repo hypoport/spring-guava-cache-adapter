@@ -1,4 +1,4 @@
-spring-guava-cache-adapter
+Spring Guava Cache Adapter
 ==========================
 
 
@@ -36,7 +36,7 @@ Contributors
 ------
 
 - Oliver Otzen
-- Timmo Freudl-Gierke
+- [Timmo Freudl-Gierke](https://github.com/timmo)
 
 
 License
