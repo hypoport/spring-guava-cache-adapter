@@ -18,6 +18,7 @@ package org.hypoport.springGuavaCacheAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
@@ -28,13 +29,39 @@ public class SpringGuavaCacheAdapterTest extends AbstractTestNGSpringContextTest
   @Autowired
   Bean bean;
 
-  @Test
-  public void cached_method_gets_invoked_only_once() {
+  @BeforeMethod
+  public void beforeMethod() {
+    bean.resetCallCount();
+  }
 
-    bean.getSomething("KEY");
-    bean.getSomething("KEY");
-    bean.getSomething("KEY");
+  @Test
+  public void cached_method_gets_invoked_only_once_for_same_key() {
+
+    bean.getSomethingCached("KEY");
+    bean.getSomethingCached("KEY");
+    bean.getSomethingCached("KEY");
 
     assertThat(bean.getCallCount()).isEqualTo(1);
+  }
+
+  @Test
+  public void cached_method_gets_invoked_one_time_per_key() {
+
+    bean.getSomethingCached("A");
+    bean.getSomethingCached("A");
+    bean.getSomethingCached("B");
+    bean.getSomethingCached("B");
+
+    assertThat(bean.getCallCount()).isEqualTo(2);
+  }
+
+  @Test
+  public void not_cached_method_gets_invoked_every_time() {
+
+    bean.getSomething("KEY");
+    bean.getSomething("KEY");
+    bean.getSomething("KEY");
+
+    assertThat(bean.getCallCount()).isEqualTo(3);
   }
 }

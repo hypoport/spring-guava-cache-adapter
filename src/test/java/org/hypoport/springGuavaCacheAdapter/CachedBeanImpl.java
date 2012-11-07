@@ -25,7 +25,7 @@ public class CachedBeanImpl implements Bean {
 
   @Override
   @Cacheable("testCache")
-  public String getSomething(String key) {
+  public String getSomethingCached(String key) {
     callCount++;
     return key;
   }
@@ -33,5 +33,16 @@ public class CachedBeanImpl implements Bean {
   @Override
   public int getCallCount() {
     return callCount;
+  }
+
+  @Override
+  public String getSomething(String key) {
+    callCount++;
+    return key;
+  }
+
+  @Override
+  public void resetCallCount() {
+    callCount = 0;
   }
 }

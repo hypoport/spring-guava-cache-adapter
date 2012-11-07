@@ -17,7 +17,11 @@ package org.hypoport.springGuavaCacheAdapter;
 
 public interface Bean {
 
-  String getSomething(String key);
+  String getSomethingCached(String key);
 
   int getCallCount();
+
+  String getSomething(String key);
+
+  void resetCallCount();
 }
