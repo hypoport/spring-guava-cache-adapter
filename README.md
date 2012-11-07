@@ -25,9 +25,9 @@ Activate the @Cachable annotation and declare a cacheManager containing your gua
       </property>
     </bean>
 
-For further details please consider the test.
+For further details please consider src/test/*
 
-Credits
+Contributors
 ------
 
 - Oliver Otzen
