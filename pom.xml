@@ -63,4 +63,16 @@
       </plugin>
     </plugins>
   </build>
+
+  <scm>
+    <connection>https://github.com/Hypoport/spring-guava-cache-adapter.git</connection>
+    <developerConnection>https://github.com/Hypoport/spring-guava-cache-adapter.git</developerConnection>
+    <url>https://github.com/Hypoport/spring-guava-cache-adapter.git</url>
+  </scm>
+
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/Hypoport/spring-guava-cache-adapter/issues</url>
+  </issueManagement>
+
 </project>
