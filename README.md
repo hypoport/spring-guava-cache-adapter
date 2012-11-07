@@ -1,4 +1,4 @@
-spring-guava-cache-adapter
+Spring Guava Cache Adapter
 ==========================
 
 
