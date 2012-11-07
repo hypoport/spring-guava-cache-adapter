@@ -19,15 +19,20 @@ Activate the @Cachable annotation and declare a cacheManager containing your gua
       <property name="caches">
         <list>
           <bean name="yourCache" class="org.hypoport.springGuavaCacheAdapter.SpringGuavaCacheAdapter">
-            <property name="maximumSize" value="1"/>
           </bean>
         </list>
       </property>
     </bean>
 
+You can than annotate the method to cache of your spring bean with @Cacheable.
+
+    @Cacheable("yourCache")
+    public String getSomethingCached(String key) {...}
+
+
 For further details please consider the test.
 
-Credits
+Contributors
 ------
 
 - Oliver Otzen
