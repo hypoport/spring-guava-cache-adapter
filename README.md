@@ -31,7 +31,7 @@ Contributors
 ------
 
 - Oliver Otzen
-- Timmo Freudl-Gierke
+- [Timmo Freudl-Gierke](https://github.com/timmo)
 
 
 License
