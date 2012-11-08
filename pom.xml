@@ -101,7 +101,7 @@
             <exclude>pom.xml.releaseBackup</exclude>
           </excludes>
           <properties>
-            <!--<moduleName>JODReports Testing Support Library</moduleName>-->
+            <!--<moduleName>&lt;Name of my Open Source project&gt;</moduleName>-->
           </properties>
         </configuration>
         <executions>
@@ -118,14 +118,14 @@
   </build>
 
   <scm>
-    <connection>https://github.com/Hypoport/spring-guava-cache-adapter.git</connection>
-    <developerConnection>https://github.com/Hypoport/spring-guava-cache-adapter.git</developerConnection>
-    <url>https://github.com/Hypoport/spring-guava-cache-adapter.git</url>
+    <connection>https://github.com/hypoport/spring-guava-cache-adapter.git</connection>
+    <developerConnection>https://github.com/hypoport/spring-guava-cache-adapter.git</developerConnection>
+    <url>https://github.com/hypoport/spring-guava-cache-adapter.git</url>
   </scm>
 
   <issueManagement>
     <system>github</system>
-    <url>https://github.com/Hypoport/spring-guava-cache-adapter/issues</url>
+    <url>https://github.com/hypoport/spring-guava-cache-adapter/issues</url>
   </issueManagement>
 
 </project>
