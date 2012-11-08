@@ -22,10 +22,8 @@
   <groupId>org.hypoport.spring-guava-cache-adapter</groupId>
   <artifactId>spring-guava-cache-adapter</artifactId>
   <version>1.0</version>
-  <packaging>jar</packaging>
 
   <properties>
-    <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring.version>3.1.0.RELEASE</spring.version>
   </properties>
@@ -61,6 +59,7 @@
       <groupId>org.easytesting</groupId>
       <artifactId>fest-assert</artifactId>
       <version>1.4</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
@@ -73,9 +72,6 @@
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
-          <compilerArguments>
-            <endorseddirs>${endorsed.dir}</endorseddirs>
-          </compilerArguments>
         </configuration>
       </plugin>
       <plugin>
@@ -83,7 +79,7 @@
         <artifactId>maven-license-plugin</artifactId>
         <version>1.9.0</version>
         <configuration>
-          <header>${basedir}/LICENSE.TXT</header>
+          <header>${basedir}/LICENSE.txt</header>
           <encoding>${project.build.sourceEncoding}</encoding>
           <strictCheck>true</strictCheck>
           <useDefaultExcludes>false</useDefaultExcludes>
@@ -100,9 +96,6 @@
             <exclude>release.properties</exclude>
             <exclude>pom.xml.releaseBackup</exclude>
           </excludes>
-          <properties>
-            <!--<moduleName>&lt;Name of my Open Source project&gt;</moduleName>-->
-          </properties>
         </configuration>
         <executions>
           <execution>
@@ -120,7 +113,7 @@
   <scm>
     <connection>https://github.com/hypoport/spring-guava-cache-adapter.git</connection>
     <developerConnection>https://github.com/hypoport/spring-guava-cache-adapter.git</developerConnection>
-    <url>https://github.com/hypoport/spring-guava-cache-adapter.git</url>
+    <url>https://github.com/hypoport/spring-guava-cache-adapter</url>
   </scm>
 
   <issueManagement>
