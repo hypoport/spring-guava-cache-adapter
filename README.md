@@ -37,6 +37,7 @@ Contributors
 
 - Oliver Otzen
 - [Timmo Freudl-Gierke](https://github.com/timmo)
+- [Ansgar Konermann](https://github.com/ansgarkonermann)
 
 
 License
